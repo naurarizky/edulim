@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDULIM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="images/edulim.png" class="img-logo"  alt="logo">
+        <nav class="navbar">
+            <a href="index.html"> Home</a>
+            <a href="asmaul-husna.html">Asmaul Husna</a>
+            <a href="jadwalsholat.html"> Jadwal Sholat</a>
+            <a href="#list-surah">List Surah</a>
+        </nav>       
+     </header>
+ 
+     <section class="list-surah">
+        <h2 class="hadua">List <span>Surah</span></h2>
+        <img src="images/header.png"  class="img-header"   alt="image">
+        <div id="result"></div>
+        
+     </section>
+
+
+
+    <script>
+        window.onload = function() {
+            getData();
+        }
+
+        function getData() {
+            fetch('https://api.banghasan.com/quran/format/json/surat')
+            .then(function(response) {
+                if(!response.ok) {
+                    throw new Error('Gagal mengambil data');
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                displayData(data);
+            })
+            .catch(function(error) {
+                console.log("terjadi kesalahan", error);
+            })
+        }
+
+        function displayData(data) {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            data.hasil.forEach(function (surat) {
+                var suratDiv = document.createElement('div');
+                suratDiv.classList.add('surah')
+                suratDiv.className = 'container'
+
+                var asmaSurah = document.createElement('h3');
+                asmaSurah.textContent = surat.asma;
+                asmaSurah.className = 'asma'
+
+                var namaSurah = document.createElement('h2');
+                namaSurah.textContent = surat.nama;
+
+                var artiSurah = document.createElement('h5');
+                artiSurah.textContent = surat.arti;
+
+                var typeSurah = document.createElement('p');
+                typeSurah.textContent = "Klasifikasi " + surat.type;
+
+                var ayatSurah = document.createElement('p');
+                ayatSurah.textContent = "Jumlah Ayat: " + surat.ayat;
+
+                suratDiv.appendChild(asmaSurah);
+                suratDiv.appendChild(namaSurah);
+                suratDiv.appendChild(artiSurah);
+                suratDiv.appendChild(typeSurah);
+                suratDiv.appendChild(ayatSurah);
+
+                resultDiv.appendChild(suratDiv)
+            })
+        }
+
+    </script>
+    <script src="api.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,610 @@
+/* persiapan */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Epilogue', sans-serif;
+ }
+
+ :root {
+    --bg-color: #FFFFFF;
+    --kuning:#FFFFED;
+    --text-color: #4E4D4D;
+    --text-color-second: #4A4334;
+    --main-color: #61A572;
+    --main-color-blue:#76A7D9;
+   
+ }
+
+ html{
+    font-size: 62.5%;
+   overflow-x: hidden;
+ }
+
+ span{
+    color: var(--text-color-second);
+  }
+ 
+ body {
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 5rem;
+ }
+ 
+ section{
+    min-height: 100vh;
+    padding: 8rem 9% 2rem;
+ }
+ 
+ .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 1rem #ECE3FE;
+ }
+    /* home */
+ .home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+  }
+
+  .hadua {
+   font-size: 5rem;
+   margin-right: 5rem;
+   margin-bottom: 5rem;
+  }
+
+  .text{
+   font-size: 10rem;
+   align-items: center;
+   margin-bottom: 5rem;
+   margin-top: 5rem;
+   margin-right: 5rem;
+
+  }
+
+  .home-content p{
+   font-size: 1.6rem;
+   font-weight: 300;
+   margin-top: 1.4rem;
+ }
+
+  .img-logo {
+   justify-content: center;
+   margin-right: 5rem;
+   align-items: center;
+  }
+
+  .headerhome {
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 10rem;
+   margin-top: 5rem;
+   margin-left: 5rem;
+   width: 600px;
+   transition: .5s ease;
+  }
+
+  .headerhome:hover{
+   box-shadow: none;
+   transform: scale(1.05);
+ }
+
+
+  .homedua{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--kuning);
+  }
+
+  .haduaa{
+   font-size: 3rem;
+   font-weight: 800;
+   margin-right: 7rem;
+   margin-left: 2rem;
+  }
+  
+
+  .section2{
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 10rem;
+   margin-top: 5rem;
+   width: 600px;
+   margin-right: 3rem;
+   margin-left: 8rem;
+   transition: .5s ease;
+  }
+
+  .section2:hover{
+   box-shadow: none;
+   transform: scale(1.05);
+   }
+
+  .hometiga{
+   justify-content: center;
+   align-items: center;
+   background-color: var(--bg-color);
+  }
+
+   .dailypost{
+   font-size: 5rem;
+   align-items: center;
+   justify-content: center;
+   margin-top: 9rem;
+   margin-bottom: 5rem;
+  } 
+
+  /* .quotes{
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 4rem;
+   margin-top: 4rem;
+  }
+
+   .quotess{
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 4rem;
+   margin-top: 4rem;
+   } */
+
+
+   .scroll-container{
+      background: #FFEA7C;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+      border-radius: 10px;
+   }
+   .scroll-container img{
+      padding: 10px;
+   }
+ /* home */
+  
+
+   
+  
+  /* navbar */
+  .navbar :hover{
+   color: var(--main-color);
+  }
+
+ .navbar{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  .navbar a{
+   margin-left: 2rem;
+   color: var(--text-color);
+  }
+
+   .img-header {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+      margin-top: 4rem;
+     
+   }  
+
+    .hadua {
+      justify-content: center;
+      align-items: center;
+      font-size: 6rem;
+      color: var(--main-color);
+      font-weight: 600;
+    }
+    /* navbarend */
+    
+   #result {
+      grid-template-columns: repeat(4, 1fr);
+      display: grid;
+    }
+
+    .container {
+      display: inline-block;
+      background-color: var(--main-color);
+      width:30rem;
+      margin: auto auto 30px auto;
+      border-radius: 8px;
+      transition: .3s ease;
+      padding: 13px;
+      box-shadow: 0 5px 10px #3e694986;
+      font-size: 1.5rem;
+      color: var(--bg-color);
+      font-weight: 400;
+      margin-top: 4rem;
+      padding: 1.5rem;
+      
+  }
+
+  /* Asmaulhusna */
+
+ 
+
+  .haduahusna {
+   color: var(--main-color);
+   font-size: 3rem;
+   font-weight: 600;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .contaiiner {
+      display: inline-block;
+      background-color: var(--main-color);
+      width:30rem;
+      margin: auto auto 30px auto;
+      border-radius: 8px;
+      transition: .3s ease;
+      padding: 13px;
+      box-shadow: 0 5px 10px #3e694986;
+      font-size: 1.5rem;
+      color: var(--bg-color);
+      font-weight: 400;
+      margin-top: 4rem;
+      padding: 1.5rem;
+  }
+
+/* end */
+
+/* jadwal sholat */
+
+.containerr{
+   margin-top: 20px;
+
+}
+
+.card-header {
+   background-color: var(--main-color);
+   color: white;
+   text-align: center;
+   padding: 10px;
+   font-size: 2rem;
+}
+
+.table-primary th{
+   background-color: #d3d347;
+   color: white
+}
+
+.card {
+   border: 1px solid white;
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 3rem;
+}
+
+.table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.table th {
+   text-align: center;
+}
+
+.table th,
+.table td {
+   padding: 8px;
+   text-align: center;
+
+}
+
+.table-primary td {
+   font-weight: bold;
+   background-color: var(--main-color);
+   color: var(--bg-color);
+}
+
+/* footer */
+
+.footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem 9%;
+   background: var(--kuning);
+  }
+ 
+  .footer-text{
+   font-size: 1.6rem;}
+ 
+   .footer-iconTop a{
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     background: var(--main-color);
+     border-radius: .8rem;
+     transition: .5s ease;
+ 
+   }
+ 
+   .footer-iconTop a:hover {
+     box-shadow: 0 0 1rem var(--main-color)
+   }
+ 
+   .footer-iconTop a i{
+     font-size: 2.4rem;
+     color: var(--text-color-second);
+   }
+/* footer end  */
+
+/* BREAK POINT */
+
+@media (max-width :1200px){
+.home{
+   padding: 8rem 9% 2rem;
+   align-items: center;
+}
+.home-content h2 {
+   font-size: 5rem;
+}
+.hadua{
+   font-size: 2rem;
+ }
+
+ .text{
+   font-size: 0.5rem;
+   align-items: center;
+ }
+
+ .headerhome{
+   width: 500px;
+   margin-top: 2rem;
+ }
+ .quotes,
+ .quotess {
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   margin-right: 10rem;
+ }
+
+ .homedua{
+   padding: 8rem 9% 2rem;
+   align-items: center;
+}
+.haduaa{
+    font-size: 3rem;
+    text-align: center;
+   }
+
+   .section2{
+      width: 500px;
+   }
+
+   .dailypost{
+      font-size: 6rem;
+      text-align: center;
+   }
+
+   .contaiiner{
+      margin-left: 3rem;
+      align-items: center;
+      width: 200px;
+   }
+
+   .img-header{
+   align-items: center;
+   width: 800px;
+   }
+
+   .hadua{
+      text-align: center;
+      font-size: 7rem;  
+ }
+
+ .container{
+   margin-left: 3rem;
+   align-items: center;
+   width: 200px;
+ }
+
+ .hadua{
+   text-align: center;
+   font-size: 7rem; 
+ }
+}
+
+@media (max-width :911px){
+
+   .container{
+      align-items: center;
+      justify-content: center;
+      margin-right: 5rem;
+      width: 200px;
+    }
+
+    .home{
+      padding: 7rem 7% 1rem;
+      align-items: center;
+   }
+   .home-content h2 {
+      font-size: 4rem;
+   }
+   .hadua{
+      font-size: 3rem;
+    }
+   
+    .text{
+      font-size: 0.5rem;
+      align-items: center;
+    }
+
+    .section2{
+      width: 400px;
+    }
+   
+    .headerhome{
+      width: 400px;
+      margin-top: 2rem;
+    }
+
+    .quotes{
+      width: 600px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 6rem;
+    }
+
+    .quotess{
+      width: 600px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 6rem;
+    }
+
+    #result{
+      grid-template-columns: repeat(3, 1fr);
+       justify-content: center; 
+      align-items: center; 
+      width: 300px;
+      margin-left: 24rem;
+    }
+
+    .contaiiner{
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+}
+
+   @media (max-width :768){
+
+      .container{
+         align-items: center;
+         justify-content: center;
+         width: 200px;
+         margin-left: 4rem;
+         margin-right: 4rem;
+       }
+
+       .img-header{
+         justify-content: center;
+         margin-right: 5rem;
+         align-items: center;
+       }
+
+       .home{
+         padding: 7rem 7% 1rem;
+         align-items: center;
+      }
+      .home-content h2 {
+         font-size: 3rem;
+         margin-left: 4rem;
+      }
+       .text{
+         font-size: 0.5rem;
+         align-items: center;
+         margin-left: 4rem;
+       }
+   
+       .section2{
+         width: 300px;
+       }
+
+       .headerhome{
+         width: 300px;
+         margin-top: 2rem;
+       }
+
+       .haduaa{
+         font-size: 2rem;
+       }
+
+       .hadua{
+         font-size: 4rem;
+         text-align: center;
+         margin-left: 16rem;
+         align-items: center;
+       }
+
+       #result{
+         grid-template-columns: repeat(3, 1fr);
+          justify-content: center; 
+         align-items: center; 
+         width: 300px;
+         margin-left: 24rem;
+       }
+
+       .dailypost{
+         font-size: 4rem;
+       }
+
+       .contaiiner{
+         margin-left: 4rem;
+         margin-right: 4rem;
+       }
+}
+
+   @media (max-width :617){
+
+      .container{
+         align-items: center;
+         justify-content: center;
+         width: 200px;
+         margin-left: 4rem;
+         margin-right: 4rem;
+       }
+
+       .img-header{
+         justify-content: center;
+         margin-right: 4rem;
+         align-items: center;
+       }
+
+       .home{
+         padding: 7rem 7% 1rem;
+         align-items: center;
+      }
+      .home-content h2 {
+         font-size: 1rem;
+         margin-left: 4rem;
+      }
+       .text{
+         font-size: 0.5rem;
+         align-items: center;
+         margin-left: 3rem;
+       }
+
+       .headerhome{
+         width: 200px;
+         margin-top: 2rem;
+       }
+
+       #result{
+         grid-template-columns: repeat(2, 1fr);
+          justify-content: center; 
+         align-items: center; 
+         width: 200px;
+         margin-left: 24rem;
+       }
+
+       .hadua{
+         font-size: 4rem;
+         margin-left: 8rem;
+       }
+}
+
+
+   
+
+

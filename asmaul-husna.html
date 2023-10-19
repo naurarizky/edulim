@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <header class="header">
+        <img src="images/edulim.png" class="img-logo"  alt="logo">
+        <nav class="navbar">
+            <a href="index.html"> Home</a>
+            <a href="#asmaul-husna">Asmaul Husna</a>
+            <a href="jadwalsholat.html"> Jadwal Sholat</a>
+            <a href="list-surah.html">List Surah</a>
+        </nav>       
+     </header>
+ 
+     <section class="list-surah">
+        <h2 class="hadua">Asmaul <span>Husna</span></h2>
+        <img src="images/header.png"  class="img-header"   alt="image">
+        <div id="result"></div>
+        
+     </section>
+     
+    <script>
+        window.onload = function() {
+            getData();
+        }
+
+        function getData() {
+            fetch('https://api.aladhan.com/v1/asmaAlHusna')
+            .then(function(response) {
+                if(!response.ok) {
+                    throw new Error('Gagal mengambil data');
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                displayData(data);
+                console.log(data)
+            })
+            .catch(function(error) {
+                console.log("terjadi kesalahan", error);
+            })
+        }
+
+        function displayData(data) {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            data.data.forEach(function (asma) {
+                var asmaDiv = document.createElement('div');
+                asmaDiv.classList.add('asma')
+                asmaDiv.className = 'contaiiner'
+
+                var nameAsmaul = document.createElement('h3');
+                nameAsmaul.textContent = asma.name;
+                nameAsmaul.className = 'asma'
+
+                var transliterationAsmaul = document.createElement('h2');
+                transliterationAsmaul.textContent = asma.transliteration;
+
+                var numberAsmaul = document.createElement('h5');
+                numberAsmaul.textContent = "Number:  " + asma.number;
+
+                var meaningAsmaul = document.createElement('p');
+                meaningAsmaul.textContent = "Meaning: " + asma.en.meaning;
+
+                asmaDiv.appendChild(nameAsmaul);
+                asmaDiv.appendChild(transliterationAsmaul);
+                asmaDiv.appendChild(numberAsmaul);
+                asmaDiv.appendChild(meaningAsmaul);
+            
+                resultDiv.appendChild(asmaDiv)
+            })
+        }
+
+    </script>
+    <script src="api.js"></script>
+</body>
+</html>
